@@ -32,7 +32,6 @@ landing.style.backgroundImage = 'url("assets/' + imgsArray[0] + '")';
 if (slideIndex <= 3) {
   arrowAngleRight.onclick = () => {
     slideIndex += 1;
-    console.log(slideIndex);
     if (slideIndex === 1) {
       landing.style.backgroundImage = 'url("assets/' + imgsArray[0] + '")';
       bullets[2].classList.remove("active");
@@ -155,6 +154,14 @@ portfolioLists.forEach((list,i) =>{
     }
 }
 })
+// Video Section
+// Video Section Variables
+let videoBtn = document.querySelector('.video .text button')
+
+videoBtn.onclick=()=>{
+  window.open('./assets/awesome-video.mp4')
+}
+
 // Skills Section
 // Skills Section Variables
 let skillsBullets = document.querySelectorAll('.our-skills .testimonials .bullets li')
