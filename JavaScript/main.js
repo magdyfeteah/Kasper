@@ -4,6 +4,9 @@ let landing = document.querySelector(".landing");
 let searchBox = document.querySelector("header .form input");
 let container = document.querySelector("header .container");
 let navForm = document.querySelector("header .form");
+let navList = document.querySelector("header nav .menu ul");
+let toggleMenu = document.querySelector('header nav .toggle-menu')
+let menu = document.querySelector(' header nav .menu')
 let closeScearch = document.querySelector("header i.close");
 let openSearch = document.querySelector(" header nav i:nth-child(2)");
 let arrowAngleRight = document.querySelector(".landing .fa-angle-right");
@@ -11,6 +14,7 @@ let arrowAngleLeft = document.querySelector(".landing .fa-angle-left");
 let imgsArray = ["landing1.jpg", "landing2.jpg", "landing3.jpg"];
 let bullets = document.querySelectorAll(".landing .bullets li");
 let slideIndex = 1;
+console.log(toggleMenu);
 // Show search Box
 openSearch.onclick = () => {
   openSearch.style.display = "none";
@@ -26,6 +30,15 @@ closeScearch.onclick = () => {
   navForm.style.flex = "0 1 auto";
  
 };
+
+toggleMenu.onclick=()=>{
+  if (navList.style.display === "flex") {
+    navList.style.display = "none";
+  } else {
+    navList.style.display = "flex";
+  }
+}
+
 
 // Swapping Landing
 landing.style.backgroundImage = 'url("assets/' + imgsArray[0] + '")';
@@ -206,4 +219,4 @@ skillsBullets.forEach((bullet,i) =>{
 let Year = document.querySelector(".footer .year");
 
 // Change Year automatic
-Year.textContent = new Date().getFullYear();
+Year.textContent = new Date().getFullYear()
