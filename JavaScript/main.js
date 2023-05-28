@@ -1,10 +1,11 @@
 // landing Section
 // landing Section Variables
 let landing = document.querySelector(".landing");
-let searchBox = document.querySelector("header nav .form input");
-let navForm = document.querySelector("header nav .form");
-let closeScearch = document.querySelector("header nav .form i.close");
-let openSearch = document.querySelector("header nav .form i");
+let searchBox = document.querySelector("header .form input");
+let container = document.querySelector("header .container");
+let navForm = document.querySelector("header .form");
+let closeScearch = document.querySelector("header i.close");
+let openSearch = document.querySelector(" header nav i:nth-child(2)");
 let arrowAngleRight = document.querySelector(".landing .fa-angle-right");
 let arrowAngleLeft = document.querySelector(".landing .fa-angle-left");
 let imgsArray = ["landing1.jpg", "landing2.jpg", "landing3.jpg"];
@@ -15,7 +16,6 @@ openSearch.onclick = () => {
   openSearch.style.display = "none";
   closeScearch.style.display = "block";
   searchBox.style.display = "block";
-  navForm.style.flex = ".4";
 };
 
 // Hide Search Box
@@ -23,7 +23,8 @@ closeScearch.onclick = () => {
   openSearch.style.display = "block";
   closeScearch.style.display = "none";
   searchBox.style.display = "none";
-  navForm.style.flex = ".1";
+  navForm.style.flex = "0 1 auto";
+ 
 };
 
 // Swapping Landing

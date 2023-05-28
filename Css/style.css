@@ -133,6 +133,13 @@
   }
   header .container .logo img{
     height: 40px;
+    position: absolute;
+    top: 35%;
+  }
+  header .head{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
   }
   header nav{
   flex: 1;
@@ -143,7 +150,6 @@
   header nav .toggle-menu{
    color: white;
    font-size: 22px;
-  
   }
   @media(min-width:767px){
     header nav .toggle-menu{
@@ -166,12 +172,34 @@
       width: 100%;
       background-color: rgba(0, 0, 0, 0.504);
     }
+    header .form{
+      width: 100% !important;
+    }
     header nav .form{
       border-left: 0px !important;
     }
-    
+    header .container{
+      flex-direction: column;
+    }
+    header .container::after{
+      bottom: -15px;
+    }
+    header nav .toggle-menu{
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      top: 66%;
+      transform: translateY(-75%);
+      left: 75%;
   }
- 
+  header .container{
+    flex-direction: column;
+  }
+  header nav i:nth-child(2){
+  font-size: 30px;
+  top: 42%
+}
+  }
   header nav ul li a {
     padding: 15px 1 !important;
   }
@@ -191,43 +219,56 @@
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
   }
-  header nav .form{
-    width: 40px;
-    height: 30px;
+  header  .form{
+    width: 100px;
+    height: 15px;
     position: relative;
     margin-left: 30px;
-    border-left:1px solid white ;
     display: flex;
     
   }
-  header nav .form i{
+  header nav i, header  .form i.close{
     color: white;
     position: absolute;
-    font-size: 20px;
+    font-size: 25px;
     top: 50%;
-    transform: translateY(-50%);
     right: -2%;
     cursor: pointer;
   }
-  header nav .form i.close{
+
+  header i.close{
     display: none;
+    left: 7rem;
+    transform: translate(100px,-5px);
+    width: 20px;
   }
-  header nav .form input{
-    margin: 5px 0px 0px 10px;
+  header .form input{
+    margin: 5px 0px 10px 10px;
     display: none;
-    background-color: #19c9fa55;
-   
-    color: white;
+    background-color: #ffffff;
+    border-radius: 50px;
+    height: 30px;
+    position: absolute;
+    top: -5px;
+    outline: none;
+    border: transparent;
+
+  }
+  header  .form input::placeholder{
+    text-align: center;
   }
   @media (max-width:767px) {
     header nav .form input{
-      width: 135px;
       position: absolute;
-      bottom: -25px;
-      left: -100px;
+      bottom: 0px;
+      left: 0;
+      transform: translate(-75%, 50%);
     }
-    header nav .form i{
-      right: 2%;
+    header nav .form i.close{
+      position: absolute;
+    bottom: 0px;
+    left: 0;
+    transform: translate(-75%, 50%);
     }
     
   }
