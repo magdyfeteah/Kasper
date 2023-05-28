@@ -167,7 +167,7 @@
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 100%;
+      top: 117%;
       left: 0;
       width: 90%;
       background-color: rgba(0, 0, 0, 0.504);
@@ -293,7 +293,7 @@
   .landing .text{
     position: absolute;
     left: 0%;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     width: 50%;
     padding: 50px;
